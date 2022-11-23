@@ -1,40 +1,47 @@
 package com.oreyo.plugins
 
-import io.ktor.server.routing.*
-import io.ktor.http.*
-import io.ktor.server.locations.*
+import com.oreyo.route.challenge.ChallengeRoute
+import com.oreyo.route.content_creator.ContentCreatorRoute
+import com.oreyo.route.courier.CourierRoute
+import com.oreyo.route.menu.MenuRoute
+import com.oreyo.route.note.NoteRoute
+import com.oreyo.route.supplier.SupplierRoute
+import com.oreyo.route.user.UserRoute
+import com.oreyo.route.voucher.VoucherRoute
 import io.ktor.server.application.*
+import io.ktor.server.locations.*
 import io.ktor.server.response.*
-import io.ktor.server.request.*
+import io.ktor.server.routing.*
+import org.koin.ktor.ext.inject
 
+@KtorExperimentalLocationsAPI
 fun Application.configureRouting() {
-    install(Locations) {
-    }
 
+    val challengeRoute by inject<ChallengeRoute>()
+    val menuRoute by inject<MenuRoute>()
+    val noteRoute by inject<NoteRoute>()
+    val userRoute by inject<UserRoute>()
+    val voucherRoute by inject<VoucherRoute>()
+    val supplierRoute by inject<SupplierRoute>()
+    val courierRoute by inject<CourierRoute>()
+    val contentCreatorRoute by inject<ContentCreatorRoute>()
+    
     routing {
         get("/") {
             call.respondText("Hello World!")
         }
-        get<MyLocation> {
-            call.respondText("Location: name=${it.name}, arg1=${it.arg1}, arg2=${it.arg2}")
+        
+        get("/leaderboards") {
+            call.respondText("Hello from leaderboard")
         }
-        // Register nested routes
-        get<Type.Edit> {
-            call.respondText("Inside $it")
-        }
-        get<Type.List> {
-            call.respondText("Inside $it")
-        }
+        
+        challengeRoute.initChallengeRoute(this)
+        menuRoute.initMenuRoute(this)
+        noteRoute.initNoteRoute(this)
+        userRoute.initUserRoute(this)
+        voucherRoute.initVoucherRoute(this)
+        supplierRoute.apply { this@routing.initSupplierRoute() }
+        courierRoute.apply { this@routing.initCourierRoute() }
+        contentCreatorRoute.apply { this@routing.initContentCreatorRoute() }
     }
-}
-
-@Location("/location/{name}")
-class MyLocation(val name: String, val arg1: Int = 42, val arg2: String = "default")
-@Location("/type/{name}")
-data class Type(val name: String) {
-    @Location("/edit")
-    data class Edit(val type: Type)
-
-    @Location("/list/{page}")
-    data class List(val type: Type, val page: Int)
 }
