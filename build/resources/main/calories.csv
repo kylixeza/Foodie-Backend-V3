@@ -1,0 +1,65 @@
+food,category,calories
+Yogurt Smoothie,Breakfast,120
+Yogurt Smoothie,Lunch,130
+Yogurt Smoothie,Snack,126
+Yogurt Smoothie,Dinner,115
+Nasi Goreng Jawa,Breakfast,333
+Nasi Goreng Jawa,Lunch,450
+Nasi Goreng Jawa,Snack,200
+Nasi Goreng Jawa,Dinner,550
+Es Setrup,Breakfast,220
+Es Setrup,Lunch,300
+Es Setrup,Snack,320
+Es Setrup,Dinner,250
+Es Dawet,Breakfast,310
+Es Dawet,Lunch,510
+Es Dawet,Snack,440
+Es Dawet,Dinner,320
+Sate Ayam,Breakfast,541
+Sate Ayam,Lunch,682
+Sate Ayam,Snack,320
+Sate Ayam,Dinner,688
+Sate Kambing,Breakfast,514
+Sate Kambing,Lunch,688
+Sate Kambing,Snack,340
+Sate Kambing,Dinner,690
+Nasi Kebuli,Breakfast,381
+Nasi Kebuli,Lunch,400
+Nasi Kebuli,Snack,322
+Nasi Kebuli,Dinner,394
+Nasi Biryani,Breakfast,370
+Nasi Biryani,Lunch,388
+Nasi Biryani,Snack,325
+Nasi Biryani,Dinner,388
+Nasi Ayam Goreng,Breakfast,432
+Nasi Ayam Goreng,Lunch,455
+Nasi Ayam Goreng,Snack,402
+Nasi Ayam Goreng,Dinner,444
+Ayam Goreng,Breakfast,240
+Ayam Goreng,Lunch,240
+Ayam Goreng,Snack,220
+Ayam Goreng,Dinner,238
+Ayam Goreng Tepung,Breakfast,312
+Ayam Goreng Tepung,Lunch,323
+Ayam Goreng Tepung,Snack,301
+Ayam Goreng Tepung,Dinner,318
+Gulai Kambing,Breakfast,311
+Gulai Kambing,Lunch,326
+Gulai Kambing,Snack,311
+Gulai Kambing,Dinner,324
+Tahu Goreng,Breakfast,36
+Tahu Goreng,Lunch,36
+Tahu Goreng,Snack,36
+Tahu Goreng,Dinner,36
+Tempe Goreng,Breakfast,164
+Tempe Goreng,Lunch,164
+Tempe Goreng,Snack,164
+Tempe Goreng,Dinner,164
+Sup Ayam,Breakfast,76
+Sup Ayam,Lunch,78
+Sup Ayam,Snack,72
+Sup Ayam,Dinner,78
+Soup Ayam,Breakfast,76
+Soup Ayam,Lunch,78
+Soup Ayam,Snack,72
+Soup Ayam,Dinner,78
